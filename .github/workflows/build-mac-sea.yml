@@ -12,7 +12,7 @@ jobs:
       - run: cp $(which node) hello-sea
       - run: npx postject hello-sea NODE_SEA_BLOB sea-prep.blob --sentinel-fuse NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2
       - run: codesign --sign - hello-sea
-      - uses: actions/upload-artifact@v3
+      - uses: actions/upload-artifact@v4
         with:
           name: mac-sea-app
           path: hello-sea
